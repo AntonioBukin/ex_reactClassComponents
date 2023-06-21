@@ -1,0 +1,1 @@
+import { Component } from "react"; //Імпортувати з react класс Components (крок 1)
