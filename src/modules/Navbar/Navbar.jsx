@@ -2,7 +2,7 @@ import NavbarMenu from "./NavbarMenu/NavbarMenu";
 
 import styles from "./navbar.module.scss";
 
-const Navbar = (menuItems) => {
+const Navbar = ({menuItems}) => {
     return (
         <div className={styles.navbar}>
             <div className="container">
