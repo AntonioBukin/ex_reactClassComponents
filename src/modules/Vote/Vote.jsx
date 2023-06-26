@@ -1,5 +1,7 @@
 import { Component } from "react";
 
+import VoteBlock from "./VoteBlock/VoteBlock";
+
 import VoteActions from "./VoteActions/VoteActions";
 import VoteResult from "./VoteResult/VoteResult";
 
@@ -44,8 +46,13 @@ class Vote extends Component {
 
         return (
             <div className={styles.wrapper}>
-                <VoteActions leaveVote={this.leaveVote}/>
-                <VoteResult total={total} democratesPercent={democratesPercent} republicansPercent={republicansPercent}/>
+                <VoteBlock title="Leave your vote">
+                    <VoteActions leaveVote={this.leaveVote}/>
+                </VoteBlock>
+                <VoteBlock title="Result">
+                    <VoteResult total={total} democratesPercent={democratesPercent} republicansPercent={republicansPercent}/>
+                    </VoteBlock>
+                
             </div>
         )
     }
